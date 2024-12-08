@@ -23,7 +23,7 @@ const config: (env: TBuildEnv) => webpack.Configuration = ({port}) => {
         },
         devServer: buildDevServer(port),
         resolve: {
-            extensions: [".tsx", ".ts", "jsx", ".js"],
+            extensions: [".tsx", ".ts", ".jsx", ".js"],
             modules: [paths.modules],
             plugins: [new TsconfigPathsPlugin({
                 configFile: paths.tsconfig,

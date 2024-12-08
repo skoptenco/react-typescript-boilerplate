@@ -9,12 +9,12 @@ const buildDevServer: (port?: number) => DevServerConfig = (port) => {
         allowedHosts: "all",
         hot: true,
         client: {
-            overlay: {
-                errors: true,
-                warnings: true
-            }
+          overlay: {
+            errors: true,
+            warnings: true
+          },
+          progress: true,
         },
-        progress: true,
         port: port || 3000,
     }
 }

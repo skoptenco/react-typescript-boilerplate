@@ -3,14 +3,10 @@
   "version": "1.0.0",
   "description": "Boilerplate for react+typescript projects",
   "main": "index.js",
-  "config": {
-    "dev": "--config config/webpack.config.dev.js",
-    "prod": "--config config/webpack.config.prod.js"
-  },
   "scripts": {
-    "build": "cross-env-shell webpack ${npm_package_config_prod}",
-    "start": "cross-env-shell webpack serve ${npm_package_config_dev}",
-    "start-prod": "cross-env-shell webpack serve ${npm_package_config_prod}",
+    "build": "cross-env webpack --config config/webpack.config.prod.ts",
+    "start": "cross-env webpack serve --config config/webpack.config.dev.ts",
+    "start-prod": "cross-env webpack serve --config config/webpack.config.prod.ts",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },
@@ -24,13 +20,17 @@
     "@eslint/js": "^9.16.0",
     "@stylistic/eslint-plugin": "^2.11.0",
     "@types/node": "^22.10.1",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.2",
     "babel-jest": "^29.7.0",
+    "babel-loader": "^9.2.1",
     "babel-plugin-styled-components": "^2.1.4",
-    "cross-env-shell": "^7.0.3",
+    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
     "eslint": "^9.16.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.16",
@@ -50,5 +50,9 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0",
     "webpack-merge": "^6.0.1"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

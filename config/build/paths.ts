@@ -7,7 +7,7 @@ export const SRC_DIR = path.resolve(ROOT_DIR, "src");
 export const PUBLIC_DIR = path.resolve(ROOT_DIR, "public");
 
 const paths: TBuildPaths = {
-    entry: path.resolve(SRC_DIR, "index.ts"),
+    entry: path.resolve(SRC_DIR, "index.tsx"),
     output: BUILD_DIR,
     html: path.resolve(PUBLIC_DIR, "index.html"),
     tsconfig: path.resolve(ROOT_DIR, "tsconfig.json"),

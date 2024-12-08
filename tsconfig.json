@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./build/",
     "noImplicitAny": true,
+    "skipLibCheck": true,
     "module": "ESNext",
     "target": "es6",
     "jsx": "react-jsx",
@@ -12,16 +13,24 @@
     "baseUrl": ".",
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "noEmit": true,
     "paths": {
       "@/*": [
         "./src/*"
       ],
     },
-    "sourceMap": true
+    "sourceMap": true,
+    "lib": [
+      "ES2021.String",
+      "DOM",
+      "DOM.Iterable"
+    ]
   },
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"
     }
-  }
+  },
 }
